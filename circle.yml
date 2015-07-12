@@ -1,6 +1,6 @@
 test:
   override:
-    - tidybot
+    - html5validator
 deployment:
   production:
     branch: master
