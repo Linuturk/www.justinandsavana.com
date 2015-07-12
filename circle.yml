@@ -1,6 +1,6 @@
 test:
   override:
-    - make html
+    - tidybot
 deployment:
   production:
     branch: master
