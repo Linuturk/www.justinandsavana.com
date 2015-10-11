@@ -6,4 +6,4 @@ deployment:
     branch: master
     commands:
       - rm -rf $HOME/$CIRCLE_PROJECT_REPONAME/.git
-      - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME -c $CONTAINER
+      - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload --sync --delete-remote -s $HOME/$CIRCLE_PROJECT_REPONAME -c $CONTAINER
