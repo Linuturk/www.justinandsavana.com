@@ -8,4 +8,4 @@ deployment:
   production:
     branch: master
     commands:
-      - aws s3 sync $HOME/$CIRCLE_PROJECT_REPONAME s3://$BUCKET --delete --exclude ".git" --exclude "venv"
+      - aws s3 sync $HOME/$CIRCLE_PROJECT_REPONAME s3://$BUCKET --delete --exclude ".git/*" --exclude "venv/*"
