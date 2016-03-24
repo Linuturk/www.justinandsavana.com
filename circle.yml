@@ -8,6 +8,4 @@ deployment:
   production:
     branch: master
     commands:
-      - rm -rf $HOME/$CIRCLE_PROJECT_REPONAME/.git
-      - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload --sync --delete-remote -s $HOME/$CIRCLE_PROJECT_REPONAME -c $CONTAINER
-      - aws s3 sync $HOME/$CIRCLE_PROJECT_REPONAME s3://$BUCKET --delete
+      - aws s3 sync $HOME/$CIRCLE_PROJECT_REPONAME s3://$BUCKET --delete --exclude ".git" --exclude "venv"
